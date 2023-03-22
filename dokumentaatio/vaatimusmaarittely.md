@@ -16,4 +16,4 @@
 ## Käyttöliittymä kaavio
 Käyttöliittymä koostuu kuudesta näkymästä
 
-[Käyttöliittymakaavio](/../dokumentaatio/kuvat/kayttoliittymakaavio.jpg)
+[Käyttöliittymakaavio](/dokumentaatio/kuvat/kayttoliittymakaavio.jpg)
