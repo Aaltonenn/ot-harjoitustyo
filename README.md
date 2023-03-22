@@ -8,6 +8,8 @@ Rakastan **lihavoitua** ja *kursivoitua* tekstiä.
 \
 [vaatimusmäärittely](https://github.com/Aaltonenn/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 \
+[työaikakirjanpito](https://github.com/Aaltonenn/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+\
 Hienoa työtä minä!
 \
 Uusi muutos
