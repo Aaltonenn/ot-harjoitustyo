@@ -7,13 +7,13 @@
 -tallennettuja kappaleita voi hakea artistin tai kappaleen nimen mukaan
 
 
-##Laajentamismahdollisuuksia
+## Laajentamismahdollisuuksia
 -käyttöliittymään voi lisätä virtuaalipianonäppäimistön, joka näyttää mistä näppäimistä sointu koostuu (saman voi tehdä ukulelelle/kitaralle)
 -Käyttöliittymään voi lisätä virtuaalipianonäppäimstön jossa käyttäjä voi painaa näppäimiä, ja ohjelma kertoo mikä kyseinen sointu on 
 -Eri käyttäjät voi tallentaa omia kappaleita...?
 
 
-##Käyttöliittymä kaavio
+## Käyttöliittymä kaavio
 Käyttöliittymä koostuu kuudesta näkymästä
 
-/../dokumentaatio/kuvat/kayttoliittymakaavio.jpg
+[Käyttöliittymakaavio](/../dokumentaatio/kuvat/kayttoliittymakaavio.jpg)
