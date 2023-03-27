@@ -1,7 +1,9 @@
 ---
-classDiagram
-    class Peli <-- Pelilauta
-    Pelilauta <|-- Pelaajat
-    Pelilauta : +Ruutu
-    Pelaajat : +NappulanSijainti
+title: Bank example
 ---
+classDiagram
+    class BankAccount
+    BankAccount : +String owner
+    BankAccount : +Bigdecimal balance
+    BankAccount : +deposit(amount)
+    BankAccount : +withdrawal(amount)
