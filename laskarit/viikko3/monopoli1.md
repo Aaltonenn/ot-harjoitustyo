@@ -2,11 +2,14 @@
 
 ```mermaid
  classDiagram
-      Pelaaja "1" -->  Pelilauta "0"
-      class Pelaaja
-          nappula
+      Todo "*" --> "1" User
+      class User{
+          username
+          password
       }
-      class Pelilauta{
-          ruutu
+      class Todo{
+          id
+          content
+          done
       }
 ```
