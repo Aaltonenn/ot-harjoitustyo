@@ -2,7 +2,7 @@
 
 ```mermaid
  classDiagram
-      Pelaaja "1" --> "0" Pelilauta
+      Pelaaja "1" --> "40" Pelilauta
       Peli "1" --> "2...8" Pelaaja
       Peli "1" --> "1" Pelilauta
 
@@ -13,5 +13,6 @@
           ruutu
       }
       class Peli{
+          noppa
       }
 ```
