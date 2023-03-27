@@ -2,7 +2,7 @@
 
 ```mermaid
  classDiagram
-      Pelaaja "1" -->  Pelilauta
+      Pelaaja "1" -->  Pelilauta "0"
       class Pelaaja
           nappula
       }
