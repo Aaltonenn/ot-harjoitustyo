@@ -1,17 +1,12 @@
-## Sovelluslogiikka
-
-Sovelluksen loogisen tietomallin muodostavat luokat User ja Todo, jotka kuvaavat käyttäjiä ja käyttäjien tehtäviä:
+## Monopoli
 
 ```mermaid
  classDiagram
-      Todo "*" --> "1" User
-      class User{
-          username
-          password
+      Pelaaja "1" -->  Pelilauta
+      class Pelaaja
+          nappula
       }
-      class Todo{
-          id
-          content
-          done
+      class Pelilauta{
+          ruutu
       }
 ```
