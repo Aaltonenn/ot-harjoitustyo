@@ -3,13 +3,10 @@
 ```mermaid
  classDiagram
       Todo "*" --> "1" User
-      class User{
-          username
-          password
+      class Pelaaja{
+          nappula
       }
-      class Todo{
-          id
-          content
-          done
+      class Pelilauta{
+          ruutu
       }
 ```
