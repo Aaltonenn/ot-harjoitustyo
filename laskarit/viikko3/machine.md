@@ -8,14 +8,14 @@ sequenceDiagram
     machine-)engine: self._engine.start()
     engine-)machine: self._fuel.tank.consume(5)
     machine-)tank: if running
-    tank-)machine: return
     engine-)tank: use_energy()
-    machine-)tank: if running
     tank-)machine: true
+    machine-)tank: if running
     engine-)tank: use_energy()
-    machine-)tank: if running
     tank-)machine: true
-    engine-)tank: use_energy()     
+    machine-)tank: if running
+    engine-)tank: use_energy()
+    tank-)machine: true
     machine-)tank: if running
     tank-)machine: false
 
