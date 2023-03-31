@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     main->>machine: Machine() 
     machine-)tank: FuelTank()
@@ -16,3 +17,4 @@ sequenceDiagram
     engine-)tank use.energy()     
     machine-)tank: if running
     tank-)machine: false
+```
