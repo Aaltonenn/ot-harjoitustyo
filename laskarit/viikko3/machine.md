@@ -8,5 +8,9 @@ sequenceDiagram
     machine-)engine: self._engine.start()
     engine-)machine: self._fuel.tank.consume(5)
     machine-)tank: if running
+    tank-)machine: true
+    engine-)tank use.energy()
+    machine-)tank: if running
+
 
 ```
