@@ -15,6 +15,8 @@
       Ruudut <|-- Asemat
       Ruudut <|-- Laitokset
       Ruudut <|-- Normaalit kadut
+      Sattuma --> Kortit
+      Yhteismaa --> Kortit
 
 
 
