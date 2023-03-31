@@ -9,31 +9,57 @@
       Pelilauta --> "40" Ruudut
       Nappula "1" --> "1" Ruudut
       Ruudut <|-- Aloitusruutu
-      Ruudut --> Vankila
-      Ruudut --> Sattuma
-      Ruudut --> Yhteismaa
-      Ruudut --> Asemat
-      Ruudut --> Laitokset
-      Ruudut --> Normaalit kadut
+      Ruudut <|-- Vankila
+      Ruudut <|-- Sattuma
+      Ruudut <|-- Yhteismaa
+      Ruudut <|-- Asemat
+      Ruudut <|-- Laitokset
+      Ruudut <|-- Normaalit kadut
 
 
 
       class Pelaaja{
       raha
+      omistetut kadut
       }
       class Pelilauta{
       }
       class Peli{
+      }
+      class Noppa{
+      silmäluku
       }
       class Nappula{
       }
       class Ruudut{
       }
       class Aloitusruutu{
+      1.ruutu
+      toiminto()
       }
       class Vankila{
+      21.ruutu
+      toiminto()
       }
       class Sattuma{
+      nosta sattuma kortti
+      }
+      class Yhteismaa{
+      nosta yhteismaa kortti
+      }
+      class Asemat{
+      toiminto()
+      }
+      class Laitokset{
+      toiminto()
+      }
+      class Normaalit kadut{
+      -nimi
+      toiminto()
+      -rakennukset
+      }
+      class Kortit{
+      kortti()
       }
 
 
