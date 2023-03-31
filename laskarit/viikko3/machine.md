@@ -11,6 +11,12 @@ sequenceDiagram
     tank-)machine: return
     engine-)tank use_energy()
     machine-)tank: if running
-
+    tank-)machine: true
+    engine-)tank use_energy()
+    machine-)tank: if running
+    tank-)machine: true
+    engine-)tank use_energy()     
+    machine-)tank: if running
+    tank-)machine: false
 
 ```
