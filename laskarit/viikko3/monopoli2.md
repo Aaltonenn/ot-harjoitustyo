@@ -44,10 +44,10 @@
       toiminto()
       }
       class Sattuma{
-      nosta sattuma kortti
+      nosta_sattuma_kortti()
       }
       class Yhteismaa{
-      nosta yhteismaa kortti
+      nosta_yhteismaa_kortti()
       }
       class Asemat{
       toiminto()
