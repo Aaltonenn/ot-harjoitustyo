@@ -1,3 +1,4 @@
+## Machine
 ```mermaid
 sequenceDiagram
     main->>machine: Machine() 
