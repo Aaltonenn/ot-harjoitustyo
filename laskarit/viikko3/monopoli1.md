@@ -8,6 +8,8 @@
       Peli --> "2" Noppa
       Pelaaja "1" --> "1" Nappula
       Pelilauta --> "40" Ruutu
+      Pelaaja --> "1" Nappula
+      Nappula "1" --> "1" Ruutu
       
       class Pelaaja{
       }
@@ -17,4 +19,7 @@
       }
       class Nappula{
       }
+      class Ruutu{
+      }
+      
 ```
