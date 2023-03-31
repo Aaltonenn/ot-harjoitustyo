@@ -6,7 +6,7 @@
       Peli --> "2...8" Pelaaja
       Peli --> "1" Pelilauta
       Peli --> "2" Noppa
-      Pelaaja "1" -> "1" Nappula
+      Pelaaja "1" --> "1" Nappula
 
       class Pelaaja{
       }
