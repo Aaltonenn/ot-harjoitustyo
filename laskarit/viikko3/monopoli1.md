@@ -2,17 +2,22 @@
 
 ```mermaid
  classDiagram
-      Pelaaja "1" --> "40" Pelilauta
-      Peli "1" --> "2...8" Pelaaja
-      Peli "1" --> "1" Pelilauta
-
+      Peli --> "2...8" Pelaaja
+      Peli --> "1" Pelilauta
+      Peli --> "2" Noppa
+      Pelaaja "1" --> "1" Nappula
+      Pelilauta --> "40" Ruutu
+      Nappula "1" --> "1" Ruutu
+      
       class Pelaaja{
-          nappula
       }
       class Pelilauta{
-          ruutu
       }
       class Peli{
-          noppa
       }
+      class Nappula{
+      }
+      class Ruutu{
+      }
+      
 ```
