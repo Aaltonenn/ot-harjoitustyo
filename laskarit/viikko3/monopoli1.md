@@ -14,4 +14,6 @@
       }
       class Peli{
       }
+      class Nappula{
+      }
 ```
