@@ -1,5 +1,4 @@
-numero = int(input("anna numero:"))
-print("numero")
-print("numero")
-print("numero")
+from ui.ui import UI
 
+ui_view = UI()
+ui_view.start()
