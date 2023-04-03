@@ -20,7 +20,7 @@ Notes = {
 class Service:
 #Tutkii onko kyseinen sointu duuri tai molli sointu kutsumalla 
 #kummallekki luotua metodia
-    def chord_recongition(note1,note2,note3):
+    def chord_determination(note1,note2,note3):
         if Service.is_major_chord(note1,note2,note3) == True:
             return "this is major chord"
         elif Service.is_minor_chord(note1,note2,note3) == True:
@@ -34,7 +34,6 @@ class Service:
 #tämä metodi tutkii onko annettu sointu duuri(major)sointu.
 #tällä hetkellä metodi olettaa että juurisävel on joko c,c#,d,d# tai E
     def is_major_chord(note1,note2,note3):
-        #tällä hetkellä ohjelma tutkii
         if Notes[note1] + 4 == Notes[note2] and Notes[note1] + 7 == Notes[note3]:
             return True 
         if Notes[note1] + 4 == Notes[note3] and Notes[note1] + 7 == Notes[note2]:

@@ -7,16 +7,16 @@ Notes = {
     "D#": 4,
     "E": 5,
     "F": 6,
-    "G": 7,
-    "G#": 8,
-    "A": 9,
-    "A#": 10,
-    "B": 11,
-    "B#": 12,
+    "F#": 7,
+    "G": 8,
+    "G#": 9,
+    "A": 10,
+    "A#": 11,
+    "B": 12,
 }
 
-class Recognize_chord:
-    def recognize_chord(self):
+class Determine_chord:
+    def determine_chord(self):
         while True:
             print("give 3 notes")
             note1=input()
@@ -30,4 +30,4 @@ class Recognize_chord:
             if note1 not in Notes or note2 not in Notes or note3 not in Notes:
                 print("error notes are not real")
                 continue
-            Service.chord_recongition(note1,note2,note3)
+            print(Service.chord_determination(note1,note2,note3))

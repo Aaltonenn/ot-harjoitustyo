@@ -1,6 +1,6 @@
-from ui.recognize_chord import Recognize_chord
+from ui.determine_chord import Determine_chord
 
 class UI:
     def start(self):
-        recognize_ui = Recognize_chord()
-        recognize_ui.recognize_chord()
+        determine_ui = Determine_chord()
+        determine_ui.determine_chord()
