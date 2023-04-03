@@ -11,6 +11,10 @@ Ohjelma pyytää antamaan 3 säveltä (säveliä ovat A, A#, B, C, C#, D, D#, E,
 \
 [changelog](https://github.com/Aaltonenn/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
+# Asennusohjeet
+
+Ohjelmaa pyörittääksesi tulee sinun asentaa poetry invoke
+
 
 # komentorivitoiminnot
 - suorita ohjelma - poetry run invoke start
