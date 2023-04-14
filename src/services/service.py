@@ -12,56 +12,69 @@ Notes = {
     "G#": 9,
     "A": 10,
     "A#": 11,
-    "B": 12,
+    "B": 12
+}
+Reversed = {
+    1: "C",
+    2: "C#",
+    3: "D",
+    4: "D#",
+    5: "E",
+    6: "F",
+    7: "F#",
+    8: "G",
+    9: "G#",
+    10: "A",
+    11: "A#",
+    12: "B"
 }
 
 
-
 class Service:
-#Tutkii onko kyseinen sointu duuri tai molli sointu kutsumalla 
+    def __init__(self,note1,note2,note3):
+        self.list = [Notes[note1], Notes[note2], Notes[note3]]
+        self.chord_determination()
+
+#Tutkii onko kyseinen sointu duuri tai molli sointu kutsumalla
 #kummallekki luotua metodia
-    def chord_determination(note1,note2,note3):
-        if Service.is_major_chord(note1,note2,note3) == True:
-            return "this is major chord"
-        elif Service.is_minor_chord(note1,note2,note3) == True:
-            return "this is minor chord"
-        else:
-            return "this is not major or minor chord"
+    def chord_determination(self):
+        if Service.is_major_chord(self):
+            print(f"this is {Reversed[self.rootnote]} major chord")
+        if Service.is_minor_chord(self):
+            print(f"this is {Reversed[self.rootnote]} minor chord")
+        return "this is not major or minor chord"
 
 
-
-    
 #tämä metodi tutkii onko annettu sointu duuri(major)sointu.
-#tällä hetkellä metodi olettaa että juurisävel on joko c,c#,d,d# tai E
-    def is_major_chord(note1,note2,note3):
-        if Notes[note1] + 4 == Notes[note2] and Notes[note1] + 7 == Notes[note3]:
-            return True 
-        if Notes[note1] + 4 == Notes[note3] and Notes[note1] + 7 == Notes[note2]:
-            return True
-        if Notes[note2] + 4 == Notes[note1] and Notes[note2] + 7 == Notes[note3]:
-            return True
-        if Notes[note2] + 4 == Notes[note3] and Notes[note2] + 7 == Notes[note1]:
-            return True
-        if Notes[note3] + 4 == Notes[note1] and Notes[note3] + 7 == Notes[note2]:
-            return True
-        if Notes[note3] + 4 == Notes[note2] and Notes[note3] + 7 == Notes[note1]:
-            return True
+    def is_major_chord(self):
+        i=0
+        while i < 3:
+            self.list.sort()
+            self.rootnote = self.list[0] # pylint: disable=attribute-defined-outside-init
+            self.secondnote = self.list[1] # pylint: disable=attribute-defined-outside-init
+            self.thirdnote = self.list[2] # pylint: disable=attribute-defined-outside-init
+            if (self.rootnote+self.secondnote+self.thirdnote)%3==2:
+                if self.rootnote + 4 == self.secondnote and self.rootnote + 7 == self.thirdnote:
+                    return True
+            self.rootnote += 12
+            i+=1
+            self.list = [self.rootnote,self.secondnote,self.thirdnote]
         return False
 
 
 #tämä metodi tutkii onko annettu sointu molli(minor)sointu.
-#tällä hetkellä metodi olettaa että juurisävel on joko c,c#,d,d# tai E
-    def is_minor_chord(note1,note2,note3):
-        if Notes[note1] + 3 == Notes[note2] and Notes[note1] + 7 == Notes[note3]:
-            return True 
-        if Notes[note1] + 3 == Notes[note3] and Notes[note1] + 7 == Notes[note2]:
-            return True
-        if Notes[note2] + 3 == Notes[note1] and Notes[note2] + 7 == Notes[note3]:
-            return True
-        if Notes[note2] + 3 == Notes[note3] and Notes[note2] + 7 == Notes[note1]:
-            return True
-        if Notes[note3] + 3 == Notes[note1] and Notes[note3] + 7 == Notes[note2]:
-            return True
-        if Notes[note3] + 3 == Notes[note2] and Notes[note3] + 7 == Notes[note1]:
-            return True
+    def is_minor_chord(self):
+        i=0
+        while i < 3:
+            self.list.sort()
+            self.rootnote = self.list[0] # pylint: disable=attribute-defined-outside-init
+            self.secondnote = self.list[1] # pylint: disable=attribute-defined-outside-init
+            self.thirdnote = self.list[2] # pylint: disable=attribute-defined-outside-init
+            if (self.rootnote+self.secondnote+self.thirdnote)%3==1:
+                if self.rootnote + 3 == self.secondnote and self.rootnote + 7 == self.thirdnote:
+                    return True
+            self.rootnote += 12
+            i+=1
+            self.list = [self.rootnote,self.secondnote,self.thirdnote]
         return False
+    

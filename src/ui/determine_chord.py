@@ -30,4 +30,4 @@ class Determine_chord:
             if note1 not in Notes or note2 not in Notes or note3 not in Notes:
                 print("error notes are not real")
                 continue
-            print(Service.chord_determination(note1,note2,note3))
+            Service(note1,note2,note3)
