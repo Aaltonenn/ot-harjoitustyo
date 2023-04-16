@@ -1,7 +1,9 @@
 ## Sointu-ohjelma
 
--*Tällä hetkellä*- sovelluksella voidaan tarkistaa muodostaako käyttäjän antamat 3 säveltä joko duuri- tai mollisoinnun. Tulevista laajennuksista löytyy lisää vaatimusmäärittelystä. 
-Ohjelma pyytää antamaan 3 säveltä (säveliä ovat A, A#, B, C, C#, D, D#, E, F, F#, G, G#). Tämän jälkeen ohjelma kertoo tuottaako kyseiset 3 säveltä duuri- tai mollisoinnun. (Esimerkki duuri soinnusta on C, E, G ja esimerkki mollisoinnusta on B, D, F#). Ohjelma voidaan pysäyttää syöttämällä säveliksi numeron 0
+
+-*Tällä hetkellä*- sovelluksella voidaan tarkistaa muodostaako käyttäjän antamat 3 säveltä joko duuri- tai mollisoinnun. Sovellus osaa myös kertoa mitkä kolme (3) säveltä käyttäjän anta sointu pitää sisällään. Tulevista laajennuksista löytyy lisää vaatimusmäärittelystä.
+
+-Ohjelman käynnistyttyä se kysyy mitä haluat tehdä - [1] haluatko antaa soinnun, jonka jälkeen sovellus kertoo mistä sävelistä se koostuu (esimerkki sointu voisi olla vaikka C duuri eli major) vai [2] antaa sovellukselle 3 säveltä (säveliä ovat A, A#, B, C, C#, D, D#, E, F, F#, G, G#) ja sovellus päättelee, muodostavatko nämä mitään sointua.
 
 # Dokumentaatio
 
