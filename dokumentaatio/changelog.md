@@ -11,5 +11,5 @@
 - invoke lint lisätty
 - ui.py tehty kattavammaksi ja selkeämmäksi
 - chord_determination tunnistaa nyt myös lowercase kirjaimet sekä alennetut sävelet esim C#=Db
-- luotu Give_notes luokka, joka kertoo mistä sävelistä käyttäjän antama sointu koostuu.
-- Give_notesille luotu oma käyttöliittymä ja kaikki tarvittavat testit
+- luotu GiveNotes luokka, joka kertoo mistä sävelistä käyttäjän antama sointu koostuu.
+- GiveNotesille luotu oma käyttöliittymä ja kaikki tarvittavat testit
