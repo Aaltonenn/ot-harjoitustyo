@@ -2,12 +2,12 @@
 
 ```mermaid
  classDiagram
-      UI --> determine_chord
-      UI --> note_giver
-      determine_chord --> services.service
-      note_giver --> services.service
-      services.service --> ChordDetermination
-      services.service --> GiveNotes
+      UI "1" --> "1" determine_chord
+      UI "1" --> "1" note_giver
+      determine_chord "1" --> "1" services.service
+      note_giver "1" --> "1" services.service
+      services.service "1" --> "1" ChordDetermination
+      services.service "1" --> "1" GiveNotes
       
       class note_giver{
       NoteGiver
