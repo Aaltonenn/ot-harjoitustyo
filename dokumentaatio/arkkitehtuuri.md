@@ -10,7 +10,6 @@
       services.service "1" --> "1" GiveNotes
       
       class note_giver{
-      NoteGiver
       }
       class determine_chord{
       }
