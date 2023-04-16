@@ -7,6 +7,7 @@
 3.4\
 2h Loin lisää testejä, coverage raportin, .gitignoren, invoke testin ja coverage-reportin, 
 
+Viiko 3 tunnit: 7h
 
 14.4\
 3h pylint käyttöönotto, koodinkorjaaminen pylintin mukaiseksi.
@@ -17,3 +18,6 @@
 2h service.py selkeyttäminen ja pienien parannuksien tekeminen.
 2h luokka Give_notes luotu, sille oma käyttöliittymä ja testit
 1h paranneltu koodin rakennetta
+1h arkkitehtuuri luotu, changelog, readme ja tuntikirjanpito päivitettu
+\
+Viikon 4 tunnit: 11h
