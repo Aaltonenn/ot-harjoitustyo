@@ -11,15 +11,17 @@
       
       class ChordDetermination{
       chord_determination()
+      is_major_chord()
+      is_minor_chord()
       }
       class GiveNotes{
-      give_notes
+      give_notes()
       }
-      class Peli{
+      class note_giver{
+      give_note()
       }
-      class Nappula{
-      }
-      class Ruutu{
+      class determine_chord{
+      determine_chord()
       }
       
 ```
