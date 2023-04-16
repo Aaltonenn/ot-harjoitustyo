@@ -10,6 +10,8 @@ Ohjelma pyytää antamaan 3 säveltä (säveliä ovat A, A#, B, C, C#, D, D#, E,
 [työaikakirjanpito](https://github.com/Aaltonenn/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 \
 [changelog](https://github.com/Aaltonenn/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+\
+[arkkitehtuuri](https://github.com/Aaltonenn/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
 # Asennusohjeet
 
@@ -20,3 +22,4 @@ Ohjelmaa pyörittääksesi tulee sinun asentaa poetry invoke
 - suorita ohjelma - poetry run invoke start
 - ohjelman testaus - poetry run invoke test
 - testien kattavuus - poetry run invoke coverage -report
+- pylint testaut . poetry run invoke lint
