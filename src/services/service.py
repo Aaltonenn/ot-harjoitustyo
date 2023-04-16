@@ -12,7 +12,12 @@ Notes = {
     "G#": 9,
     "A": 10,
     "A#": 11,
-    "B": 12
+    "B": 12,
+    "DB": 2,
+    "EB": 4,
+    "GB": 7,
+    "AB": 9,
+    "BB": 11
 }
 Reversed = {
     1: "C",
@@ -30,51 +35,79 @@ Reversed = {
 }
 
 
-class Service:
-    def __init__(self,note1,note2,note3):
-        self.list = [Notes[note1], Notes[note2], Notes[note3]]
-        self.chord_determination()
+class ChordDetermination:
 
 #Tutkii onko kyseinen sointu duuri tai molli sointu kutsumalla
 #kummallekki luotua metodia
-    def chord_determination(self):
-        if Service.is_major_chord(self):
-            print(f"this is {Reversed[self.rootnote]} major chord")
-        if Service.is_minor_chord(self):
-            print(f"this is {Reversed[self.rootnote]} minor chord")
-        return "this is not major or minor chord"
+    def chord_determination(self,note1,note2,note3):
+        if note1 not in Notes or note2 not in Notes or note3 not in Notes:
+            return"The notes you gave are unknown. For example try giving these the notes C, E, G"
+        is_major = ChordDetermination.is_major_chord(self,note1,note2,note3)
+        if is_major is not False:
+            return f"That is a {Reversed[is_major]} major chord"
+        is_minor = ChordDetermination.is_minor_chord(self,note1,note2,note3)
+        if is_minor is not False:
+            return f"That is a {Reversed[is_minor]} minor chord"
+        return "That is not a major or a minor chord"
 
 
 #tämä metodi tutkii onko annettu sointu duuri(major)sointu.
-    def is_major_chord(self):
+    def is_major_chord(self,note1,note2,note3):
+        list_of_notes = [Notes[note1], Notes[note2], Notes[note3]]
         i=0
         while i < 3:
-            self.list.sort()
-            self.rootnote = self.list[0] # pylint: disable=attribute-defined-outside-init
-            self.secondnote = self.list[1] # pylint: disable=attribute-defined-outside-init
-            self.thirdnote = self.list[2] # pylint: disable=attribute-defined-outside-init
-            if (self.rootnote+self.secondnote+self.thirdnote)%3==2:
-                if self.rootnote + 4 == self.secondnote and self.rootnote + 7 == self.thirdnote:
-                    return True
-            self.rootnote += 12
+            list_of_notes.sort()
+            rootnote = list_of_notes[0]
+            secondnote = list_of_notes[1]
+            thirdnote = list_of_notes[2]
+            if (rootnote+secondnote+thirdnote)%3==2:
+                if rootnote + 4 == secondnote and rootnote + 7 == thirdnote:
+                    return rootnote
+            rootnote += 12
             i+=1
-            self.list = [self.rootnote,self.secondnote,self.thirdnote]
+            list_of_notes = [rootnote,secondnote,thirdnote]
         return False
 
 
 #tämä metodi tutkii onko annettu sointu molli(minor)sointu.
-    def is_minor_chord(self):
+    def is_minor_chord(self,note1,note2,note3):
+        list_of_notes = [Notes[note1], Notes[note2], Notes[note3]]
         i=0
         while i < 3:
-            self.list.sort()
-            self.rootnote = self.list[0] # pylint: disable=attribute-defined-outside-init
-            self.secondnote = self.list[1] # pylint: disable=attribute-defined-outside-init
-            self.thirdnote = self.list[2] # pylint: disable=attribute-defined-outside-init
-            if (self.rootnote+self.secondnote+self.thirdnote)%3==1:
-                if self.rootnote + 3 == self.secondnote and self.rootnote + 7 == self.thirdnote:
-                    return True
-            self.rootnote += 12
+            list_of_notes.sort()
+            rootnote = list_of_notes[0]
+            secondnote = list_of_notes[1]
+            thirdnote = list_of_notes[2]
+            if (rootnote+secondnote+thirdnote)%3==1:
+                if rootnote + 3 == secondnote and rootnote + 7 == thirdnote:
+                    return rootnote
+            rootnote += 12
             i+=1
-            self.list = [self.rootnote,self.secondnote,self.thirdnote]
+            list_of_notes = [rootnote,secondnote,thirdnote]
         return False
+
+class GiveNotes:
+#kertoo mistä sävelistä käyttäjän antama duuri/mollisointu koostuu
+    def give_notes(self, rootnote, majorminor):
+        if rootnote not in Notes:
+            return "rootnote doesnt exist"
+        if majorminor not in ("1","2"):
+            return "chord has to be major [1] or minor [2]"
+        if majorminor == "1":
+            numbers = [Notes[rootnote], Notes[rootnote]+4, Notes[rootnote]+7]
+            if numbers[1]>12:
+                numbers[1] = numbers[1]-12
+            if numbers[2]>12:
+                numbers[2] = numbers[2]-12
+            notes = [Reversed[numbers[0]],Reversed[numbers[1]],Reversed[numbers[2]]]
+            return f"{notes[0]} major consists of {notes[0]}, {notes[1]} and {notes[2]} notes."
+        if majorminor == "2":
+            numbers = [Notes[rootnote], Notes[rootnote]+3, Notes[rootnote]+7]
+            if numbers[1]>12:
+                numbers[1] = numbers[1]-12
+            if numbers[2]>12:
+                numbers[2] = numbers[2]-12
+            notes = [Reversed[numbers[0]],Reversed[numbers[1]],Reversed[numbers[2]]]
+            return f"{notes[0]} minor consists of {notes[0]}, {notes[1]} and {notes[2]} notes."
+        return None
     
