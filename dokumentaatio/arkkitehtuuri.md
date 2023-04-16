@@ -4,7 +4,7 @@
  classDiagram
       UI --> note_giver
       UI --> determine_chord
-      note_giver --> services.service
+      note_giver --> service
       Pelaaja "1" --> "1" Nappula
       Pelilauta --> "40" Ruutu
       Nappula "1" --> "1" Ruutu
