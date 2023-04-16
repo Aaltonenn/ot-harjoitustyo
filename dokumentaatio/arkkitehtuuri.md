@@ -5,13 +5,15 @@
       UI --> note_giver
       UI --> determine_chord
       note_giver --> service
-      Pelaaja "1" --> "1" Nappula
-      Pelilauta --> "40" Ruutu
-      Nappula "1" --> "1" Ruutu
+      determine_chord --> service
+      service --> ChordDetermination
+      service --> GiveNotes
       
-      class Pelaaja{
+      class ChordDetermination{
+      chord_determination()
       }
-      class Pelilauta{
+      class GiveNotes{
+      give_notes
       }
       class Peli{
       }
