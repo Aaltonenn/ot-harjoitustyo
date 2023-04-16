@@ -22,4 +22,5 @@ Viiko 3 tunnit: 7h
 16.4\
 1h paranneltu koodin rakennetta
 1h arkkitehtuuri luotu, changelog, readme ja tuntikirjanpito päivitettu
+\
 Viikon 4 tunnit: 14h
