@@ -9,6 +9,9 @@
       services.service "1" --> "1" ChordDetermination
       services.service "1" --> "1" GiveNotes
       
+      
+      class UI{
+      }
       class note_giver{
       }
       class determine_chord{
