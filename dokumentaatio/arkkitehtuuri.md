@@ -1,26 +1,23 @@
-## Sointuohjelma
+## Monopoli
 
 ```mermaid
  classDiagram
-      UI "1" --> "1" determine_chord
-      UI "1" --> "1" note_giver
-      determine_chord "1" --> "1" services.service
-      note_giver "1" --> "1" services.service
-      services.service "1" --> "1" ChordDetermination
-      services.service "1" --> "1" GiveNotes
+      Peli --> "2...8" Pelaaja
+      Peli --> "1" Pelilauta
+      Peli --> "2" Noppa
+      Pelaaja "1" --> "1" Nappula
+      Pelilauta --> "40" Ruutu
+      Nappula "1" --> "1" Ruutu
       
-      
-      class UI{
+      class Pelaaja{
       }
-      class note_giver{
+      class Pelilauta{
       }
-      class determine_chord{
+      class Peli{
       }
-      class services.service{
+      class Nappula{
       }
-      class ChordDetermination{
-      }
-      class ChordDetermination{
+      class Ruutu{
       }
       
 ```
