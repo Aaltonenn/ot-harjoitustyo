@@ -103,13 +103,10 @@ class GiveNotes:
                 numbers[2] = numbers[2]-12
             notes = [Reversed[numbers[0]],Reversed[numbers[1]],Reversed[numbers[2]]]
             return (notes[0],notes[1],notes[2])
-        if majorminor == "2":
-            numbers = [Notes[rootnote], Notes[rootnote]+3, Notes[rootnote]+7]
-            if numbers[1]>12:
-                numbers[1] = numbers[1]-12
-            if numbers[2]>12:
-                numbers[2] = numbers[2]-12
-            notes = [Reversed[numbers[0]],Reversed[numbers[1]],Reversed[numbers[2]]]
-            return (notes[0],notes[1],notes[2])
-        return None
-    
+        numbers = [Notes[rootnote], Notes[rootnote]+3, Notes[rootnote]+7]
+        if numbers[1]>12:
+            numbers[1] = numbers[1]-12
+        if numbers[2]>12:
+            numbers[2] = numbers[2]-12
+        notes = [Reversed[numbers[0]],Reversed[numbers[1]],Reversed[numbers[2]]]
+        return (notes[0],notes[1],notes[2])
