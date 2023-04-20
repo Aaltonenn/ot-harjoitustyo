@@ -7,7 +7,7 @@ def main():
     window.title("Sointu ohjelma")
     ui_view = UI(window)
     ui_view.start()
-    
+
     window.mainloop()
 
 
