@@ -21,3 +21,7 @@ Viiko 3 tunnit: 7h
 1h arkkitehtuuri luotu, changelog, readme ja tuntikirjanpito päivitettu
 \
 Viikon 4 tunnit: 11h
+
+
+20.4\
+4h loin graafista käyttöliittymää

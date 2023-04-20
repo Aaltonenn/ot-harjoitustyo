@@ -15,9 +15,13 @@ Notes = {
     "B": 12,
     "DB": 2,
     "EB": 4,
+    "FB": 5,
     "GB": 7,
     "AB": 9,
-    "BB": 11
+    "BB": 11,
+    "CB": 12,
+    "B#": 1,
+    "E#": 6
 }
 Reversed = {
     1: "C",
@@ -41,14 +45,14 @@ class ChordDetermination:
 #kummallekki luotua metodia
     def chord_determination(self,note1,note2,note3):
         if note1 not in Notes or note2 not in Notes or note3 not in Notes:
-            return"The notes you gave are unknown. For example try giving these the notes C, E, G"
+            return "unknown notes"
         is_major = ChordDetermination.is_major_chord(self,note1,note2,note3)
         if is_major is not False:
-            return f"That is a {Reversed[is_major]} major chord"
+            return (Reversed[is_major],1)
         is_minor = ChordDetermination.is_minor_chord(self,note1,note2,note3)
         if is_minor is not False:
-            return f"That is a {Reversed[is_minor]} minor chord"
-        return "That is not a major or a minor chord"
+            return (Reversed[is_minor],2)
+        return "neither"
 
 
 #tämä metodi tutkii onko annettu sointu duuri(major)sointu.
@@ -91,8 +95,6 @@ class GiveNotes:
     def give_notes(self, rootnote, majorminor):
         if rootnote not in Notes:
             return "rootnote doesnt exist"
-        if majorminor not in ("1","2"):
-            return "chord has to be major [1] or minor [2]"
         if majorminor == "1":
             numbers = [Notes[rootnote], Notes[rootnote]+4, Notes[rootnote]+7]
             if numbers[1]>12:
@@ -100,7 +102,7 @@ class GiveNotes:
             if numbers[2]>12:
                 numbers[2] = numbers[2]-12
             notes = [Reversed[numbers[0]],Reversed[numbers[1]],Reversed[numbers[2]]]
-            return f"{notes[0]} major consists of {notes[0]}, {notes[1]} and {notes[2]} notes."
+            return (notes[0],notes[1],notes[2])
         if majorminor == "2":
             numbers = [Notes[rootnote], Notes[rootnote]+3, Notes[rootnote]+7]
             if numbers[1]>12:
@@ -108,6 +110,6 @@ class GiveNotes:
             if numbers[2]>12:
                 numbers[2] = numbers[2]-12
             notes = [Reversed[numbers[0]],Reversed[numbers[1]],Reversed[numbers[2]]]
-            return f"{notes[0]} minor consists of {notes[0]}, {notes[1]} and {notes[2]} notes."
+            return (notes[0],notes[1],notes[2])
         return None
     
