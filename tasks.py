@@ -5,7 +5,7 @@ def start(ctx):
     ctx.run("python3 src/index.py", pty=True)
 
 @task
-def start_gui(ctx):
+def start_tui(ctx):
     ctx.run("python3 src/index2.py", pty=True)
 
 

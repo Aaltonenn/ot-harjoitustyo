@@ -24,11 +24,15 @@ Viikon 3 tunnit: 7h
 1h arkkitehtuuri luotu, changelog, readme ja tuntikirjanpito päivitetty\
 \
 <<<<<<< HEAD
-Viikon 4 tunnit: 11h
+Viikon 4 tunnit: 14h
 
 
 20.4\
 4h loin graafista käyttöliittymää
 =======
-Viikon 4 tunnit: 14h
+23.4\
+2h jatkoin graafista käyttöliittymää
+Viikon 5 tunnit: 14h
 >>>>>>> 8e9ff7a76f69845df20e6f6018a4f18a1c653e8d
+
+
