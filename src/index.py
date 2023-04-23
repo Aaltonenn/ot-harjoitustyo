@@ -4,7 +4,7 @@ from ui.gui import UI
 
 def main():
     window = Tk()
-    window.title("Sointu ohjelma")
+    window.title("Sointuohjelma")
     ui_view = UI(window)
     ui_view.start()
 

@@ -56,7 +56,6 @@ class UI_m:
                 print(f"That is a {test.chord_determination(note1,note2,note3)[0]} minor chord")
         if test.chord_determination(note1,note2,note3) == "unknonw notes":
             print("The notes you gave are unknown. Please try these for example 'C', 'E', 'G'")
-        print("chillisti ja tällee")
         if test.chord_determination(note1,note2,note3) == "neither":
             print("The notes you gave don't make a major or minor chord")
 
