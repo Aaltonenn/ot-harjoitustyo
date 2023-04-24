@@ -3,7 +3,7 @@
 - käyttäjä antaa (esim) kolme säveltä, ohjelma kertoo mikä sointu on kyseessä (aluksi pelkästään duuri- ja mollisoinnut (NÄMÄ TEHTY), myöhemmin myös dominantti- ja vähennettyseptimisointu)
 - käyttäjä antaa yksittäisen soinnun, ohjelma kertoo mistä sävelistä se koostuu TEHTY
 - Käyttäjä antaa juurisoinnun (duuri tai molli), ohjelma kertoo mitkä soinnut sopivat sen kanssa
-- Ohjelmaan voi tallentaa kappaleiden sanoituksia ja niiden sointukulkuja
+- Ohjelmaan voi tallentaa kappaleita ja niiden sointukulkuja (TEHTY)
 - tallennettuja kappaleita voi hakea artistin tai kappaleen nimen mukaan
 
 
