@@ -5,6 +5,8 @@
 
 -Ohjelman käynnistyttyä se kysyy mitä haluat tehdä - [1] haluatko antaa soinnun, jonka jälkeen sovellus kertoo mistä sävelistä se koostuu (esimerkki sointu voisi olla vaikka C duuri eli major), [2] antaa sovellukselle 3 säveltä (säveliä ovat A, A#, B, C, C#, D, D#, E, F, F#, G, G#) ja sovellus päättelee, muodostavatko nämä mitään sointua, [3] printata kaikki /songs.csv tiedostossa olevat kappaleet vai [4] tallentaa /songs.csv tiedostoon uuden kappaleen
 
+-Huom ohjelmalla on graafinenkäyttöliittymä mutta sen kaikki tulostukset tulevat komentoriville
+
 # Dokumentaatio
 
 [vaatimusmäärittely](https://github.com/Aaltonenn/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
