@@ -4,10 +4,8 @@
  classDiagram
       UI --> note_giver
       UI --> determine_chord
-      note_giver --> service
-      determine_chord --> service
-      service --> ChordDetermination
-      service --> GiveNotes
+      note_giver --> service.Givenotes
+      determine_chord --> service.ChordDetermination
       
       class ChordDetermination{
       chord_determination()
