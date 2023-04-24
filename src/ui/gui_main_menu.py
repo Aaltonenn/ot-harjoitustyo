@@ -1,11 +1,13 @@
-from tkinter import Tk, ttk, constants, StringVar
+from tkinter import ttk, constants
 from ui.gui_note_giver import NoteGiver
 from ui.gui_determine_chord import DetermineChord
-from services.service import GiveNotes, ChordDetermination
-import time
+from ui.gui_search_songs import SearchSongs
+from ui.gui_create_song import CreateSong
+from services.service import GiveNotes, ChordDetermination, SongSearcher, SongCreater
 
 
-class UI_m:
+class GUI:
+#graafisen käyttöliittymän pääluokka, joka vastaa eri näkymien tehtävistä (buttoneista ja entryistä)
     def __init__(self, root):
         self._root = root
         self._current_view = None
@@ -27,11 +29,17 @@ class UI_m:
             self._current_view.third_entry.destroy()
         except AttributeError:
             pass
+        try:
+            self._current_view.artist_entry.destroy()
+            self._current_view.song_name_entry.destroy()
+            self._current_view.chord_progression_entry.destroy()
+        except AttributeError:
+            pass
         self._current_view = None
 
     def _show_main_menu(self):
         self._hide_current_view()
-        self._current_view = MainMenuUI(self._root, self.handle_to_give_notes, self.handle_to_determine_chord)
+        self._current_view = MainMenuUI(self._root, self.handle_to_give_notes, self.handle_to_determine_chord, self.handle_to_search_songs, self.handle_to_create_song)
         self._current_view.pack()
 
     def handle_to_give_notes(self):
@@ -43,6 +51,19 @@ class UI_m:
         self._hide_current_view()
         self._current_view = DetermineChord(self._root, self.handle_determine_chord, self.handle_to_main_menu)
         self._current_view.pack()
+
+    def handle_to_search_songs(self):
+        self._hide_current_view()
+        self._current_view = SearchSongs(self._root, self.handle_search_songs, self.handle_to_main_menu)
+        self._current_view.pack()
+    
+    def handle_to_create_song(self):
+        self._hide_current_view()
+        self._current_view = CreateSong(self._root, self.handle_create_song, self.handle_to_main_menu)
+        self._current_view.pack()
+
+    def handle_to_main_menu(self):
+        self._show_main_menu()
 
     def handle_determine_chord(self):
         note1=self._current_view.get_first_entry().upper()
@@ -79,18 +100,28 @@ class UI_m:
             if majorminor == "2":
                 print(f"{rootnote} minor consits of {notes[0]}, {notes[1]} and {notes[2]}")
         
-    def handle_to_main_menu(self):
-        self._show_main_menu()
+
+    def handle_search_songs(self):
+        SongSearcher.search_songs()
+
+    def handle_create_song(self):
+        artist = self._current_view.get_artist_entry()
+        song_name = self._current_view.get_song_name_entry()
+        chord_progression = self._current_view.get_chord_progression_entry()
+        SongCreater.create_song(artist, song_name, chord_progression)
 
 
 
 class MainMenuUI:
-    def __init__(self, root, handle_give_notes, handle_determine_chord):
+#graafisen käyttöliittymän ensimmäisestä näkymästä vastaava luokka
+    def __init__(self, root, handle_give_notes, handle_determine_chord, handle_search_songs, handle_create_song):
         self._root = root
         self._current_view = None
         self._frame = None
         self.handle_give_notes = handle_give_notes
         self.handle_determine_chord = handle_determine_chord
+        self.handle_search_songs = handle_search_songs
+        self.handle_create_song = handle_create_song
         self._initialize()
 
     def pack(self):
@@ -115,7 +146,20 @@ class MainMenuUI:
             command=self.handle_determine_chord
         )
 
+        search_songs_button = ttk.Button(
+            master=self._frame,
+            text="Search premade song chord progressions",
+            command=self.handle_search_songs
+        )
+        
+        create_song_button = ttk.Button(
+            master=self._frame,
+            text="Create a new song with a chord progression",
+            command=self.handle_create_song
+        )
 
         label.grid(row=1, column=0)
         give_notes_button.grid(row=2, column=0)
         determine_chord_button.grid(row=3, column=0)
+        search_songs_button.grid(row=4, column=0)
+        create_song_button.grid(row=5, column=0)

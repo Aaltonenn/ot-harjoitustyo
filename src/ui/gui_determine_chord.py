@@ -1,6 +1,7 @@
-from tkinter import Tk, ttk, constants
+from tkinter import ttk, constants
 
 class DetermineChord:
+#Graafisen käyttöliittymän  osa joka vastaa soiinnun tunnistamisesta
     def __init__(self, root,handle_determine_chord,handle_to_main_menu):
         self._frame = None
         self._root = root

@@ -1,6 +1,9 @@
 from services.service import ChordDetermination
 
 class DetermineChord:
+#TEKSTIKÄYTTÖLIITTYMÄN OSA joka vastaa sointujen luomisesta
+
+#sovelluslogiikka löytyy service.ChordDetermination
     def determine_chord(self):
         while True:
             print("Give 3 notes - or press 0 if you want to exit to main menu")

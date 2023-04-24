@@ -1,3 +1,5 @@
+from repositories.song_repository import SongRepository
+import os
 #Nuoteille annetaan numerolliset arvot jotta voidaan laskea
 #matemaattisesti ovatko ne duuri tai molli sointuja
 Notes = {
@@ -110,3 +112,22 @@ class GiveNotes:
             numbers[2] = numbers[2]-12
         notes = [Reversed[numbers[0]],Reversed[numbers[1]],Reversed[numbers[2]]]
         return (notes[0],notes[1],notes[2])
+    
+class SongSearcher:
+#etsii kaikki tiedostoon tallennetut kappaleet
+    def search_songs():
+        dirname = os.path.dirname(__file__)
+        song_repository = SongRepository(os.path.join(dirname, "..", "..", "data", "songs.csv"))
+        for song in song_repository._read():
+            print(f"{song[0]},  {song[1]},  {song[2]}")
+
+class SongCreater:
+#luo tiedostoon uuden kappaleen, kappaleet voi lukea SongSearcherilla
+    def create_song(artist, song_name, chord_progression):
+        dirname = os.path.dirname(__file__)
+        song_repository = SongRepository(os.path.join(dirname, "..", "..", "data","songs.csv"))
+        song_repository.create(artist, song_name, chord_progression)
+        print("Your song has been created - Here is the new list of all songs")
+        for song in song_repository._read():
+            print(f"{song[0]},  {song[1]},  {song[2]}")
+

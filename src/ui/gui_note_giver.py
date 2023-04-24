@@ -1,6 +1,7 @@
-from tkinter import Tk, ttk, constants
+from tkinter import ttk, constants
 
 class NoteGiver:
+#Graafisenkäyttöliittymän osa joka vastaa sointujen palauttamisesta käyttäjälle
     def __init__(self, root,handle_give_notes,handle_to_main_menu):
         self._frame = None
         self._root = root

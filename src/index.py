@@ -1,7 +1,7 @@
 from tkinter import Tk
 from ui.gui import UI
 
-
+#index avaa GRAAFISENkäyttöliittymän
 def main():
     window = Tk()
     window.title("Sointuohjelma")

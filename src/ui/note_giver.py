@@ -1,5 +1,8 @@
 from services.service import GiveNotes
 class NoteGiver:
+#tekstikäyttöliittymän osa joka vastaa sointujen etsimisestä
+
+#sovelluslogiikka löytyy service.Givenotes
     def give_note(self):
         while True:
             rootnote = input("Give a chord's rootnote (for example C) or press 0 to exit").upper()

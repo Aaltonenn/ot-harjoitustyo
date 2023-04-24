@@ -2,6 +2,7 @@ from ui.determine_chord import DetermineChord
 from ui.note_giver import NoteGiver
 
 class UI:
+#tämä luokka on vastussa tekstikäyttöliittymästä jonka voi avata komentoriviltä komennolla 'poetry run invoke start-tui'
     def start(self):
         while True:
             command = int(input("What would you like to do? \n Know what notes go into a chord? (press 1) \n  or \n Give 3 notes and find out if they make a chord? (press 2) \n  or\n Exit (press 0)"))
