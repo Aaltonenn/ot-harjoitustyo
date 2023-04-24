@@ -23,16 +23,22 @@ Viikon 3 tunnit: 7h
 1h paranneltu koodin rakennetta\
 1h arkkitehtuuri luotu, changelog, readme ja tuntikirjanpito päivitetty\
 \
-<<<<<<< HEAD
+
 Viikon 4 tunnit: 14h
 
 
 20.4\
 4h loin graafista käyttöliittymää
-=======
+
 23.4\
 2h jatkoin graafista käyttöliittymää
+5h loin sovellukseen mahdollisuuden lukea ja kirjoittaa kappaleita tiedostoon data/songs.csv (käyttöliittymät searchsongs, createsongs ja niiden service sekä songs_repository)
+
+24.4\
+3h dokumentaatio, koodin pienet parantelut, pylint virheiden korjaus github release
+
+
+
 Viikon 5 tunnit: 14h
->>>>>>> 8e9ff7a76f69845df20e6f6018a4f18a1c653e8d
 
 
