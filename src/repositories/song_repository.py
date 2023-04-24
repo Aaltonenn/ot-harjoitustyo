@@ -1,10 +1,11 @@
 class SongRepository:
-#kappaleiden repositorio, joka vastaa tiedostosta löytyvän kappaleiden lukemiesta ja kirjoittamisesta
+#kappaleiden repositorio, joka vastaa tiedostosta
+#löytyvän kappaleiden lukemiesta ja kirjoittamisesta
     def __init__(self, file_path):
         self._file_path = file_path
 
     def find_all(self):
-        return self._read()
+        return self.read()
 
     def create(self, artist, song_name, chord_progression):
         songs = self.find_all()
@@ -12,7 +13,7 @@ class SongRepository:
         songs.append(new_song)
         self._write(songs)
 
-    def _read(self):
+    def read(self):
         songs = []
         with open(self._file_path) as file:
             for row in file:
@@ -32,4 +33,3 @@ class SongRepository:
                 row = f"{song[0]};{song[1]};{song[2]}\n"
                 text+=row
             file.write(text)
-

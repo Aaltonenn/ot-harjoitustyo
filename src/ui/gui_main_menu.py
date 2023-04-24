@@ -102,7 +102,8 @@ class GUI:
         
 
     def handle_search_songs(self):
-        SongSearcher.search_songs()
+        test = SongSearcher()
+        test.search_songs()
 
     def handle_create_song(self):
         artist = self._current_view.get_artist_entry()
