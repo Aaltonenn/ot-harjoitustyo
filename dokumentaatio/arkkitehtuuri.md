@@ -3,8 +3,11 @@
 ```mermaid
  classDiagram
       GUI --> gui_main_menu
-      gui_main_menu note_giver
+      gui_main_menu --> note_giver
       gui_main_menu --> determine_chord
+      gui_main_menu --> search_chord
+      gui_main_menu --> create_song
+
       note_giver --> serviceGiveNotes
       determine_chord --> serviceChordDetermination
       
