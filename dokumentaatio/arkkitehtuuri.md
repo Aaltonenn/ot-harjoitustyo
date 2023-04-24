@@ -2,8 +2,9 @@
 
 ```mermaid
  classDiagram
-      UI --> note_giver
-      UI --> determine_chord
+      GUI --> gui_main_menu
+      gui_main_menu note_giver
+      gui_main_menu --> determine_chord
       note_giver --> serviceGiveNotes
       determine_chord --> serviceChordDetermination
       
