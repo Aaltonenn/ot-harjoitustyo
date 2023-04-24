@@ -1,4 +1,4 @@
-## Sointuohjelma
+# Sointuohjelma
 
 ```mermaid
  classDiagram
@@ -7,12 +7,12 @@
       note_giver --> service.Givenotes
       determine_chord --> service.ChordDetermination
       
-      class ChordDetermination{
+      class service.ChordDetermination{
       chord_determination()
       is_major_chord()
       is_minor_chord()
       }
-      class GiveNotes{
+      class service.GiveNotes{
       give_notes()
       }
       class note_giver{
