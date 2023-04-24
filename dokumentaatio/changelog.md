@@ -13,3 +13,10 @@
 - chord_determination tunnistaa nyt myös lowercase kirjaimet sekä alennetut sävelet esim C#=Db
 - luotu GiveNotes luokka, joka kertoo mistä sävelistä käyttäjän antama sointu koostuu.
 - GiveNotesille luotu oma käyttöliittymä ja kaikki tarvittavat testit
+
+24.4
+- graafinen käyttöliittymä luotu kokonaan
+- luotu mahdollisuus tallentaa uusia kappaleita data/songs.csv tiedostoon ja lukea siellä olevat kappaleet
+- main menulle, chord_determinationille, give_notesille, search_songsille ja create_songille luotu omat käyttöliittymänsä
+- serviceen luotu luokat SearchSongs ja CreateSong kappaleiden lukemista ja kirjoittamista varten
+- SongRepository luotu tiedon tallennusta varten
