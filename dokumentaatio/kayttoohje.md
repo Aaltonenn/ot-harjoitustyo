@@ -3,8 +3,11 @@
 
 ## Ohjelman käynnistäminen
 Asennariippuvuudet kirjoittamalla komentoriville
+
 - poetry install
+ 
 Tämän jälkeen voit käynnistää ohjelman komennolla
+
 - poetry run invoke start
 
 ## Main Menu
