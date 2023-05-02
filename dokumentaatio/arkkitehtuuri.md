@@ -1,5 +1,8 @@
 # Arkkitehtuurikuvaus
- 
+
+
+## Rakenne
+Ohjelma käynnistää ensin UI:n  ja sitten heti GraafisenUI:n tämän jälkeen käyttäjä tekee jotain ohjelmalla ja siirrytään sovellulogiikkaan serviceen. Mikäli käyttäjä tahtoo lukea tai kirjoittaa uusia kappaleita niin siirrytään repositoriesiin. Tämän jälkeen palataan takaisin GUI:hin.
 ![kaavio](https://user-images.githubusercontent.com/127753914/235747248-47dabe51-ad5b-4e09-a7b4-9e81343953ee.png)
  
  
