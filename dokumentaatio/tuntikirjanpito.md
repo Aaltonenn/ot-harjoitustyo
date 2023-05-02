@@ -22,7 +22,7 @@ Viikon 3 tunnit: 7h
 16.4\
 1h paranneltu koodin rakennetta\
 1h arkkitehtuuri luotu, changelog, readme ja tuntikirjanpito päivitetty\
-\
+
 
 Viikon 4 tunnit: 14h
 
@@ -41,4 +41,8 @@ Viikon 4 tunnit: 14h
 
 Viikon 5 tunnit: 14h
 
+29.4\
+3h loin what_chords_go_well käyttöliittymän ja sovelluslogiika
 
+2.5\
+6h jatkoin what_chords_go_well sovelluslogiikan ja käyttöliittymän tekemistä, loin niille testit, päivitin dokumentaatiota, paransin kommentteja, loin käyttöohjeet ja jatkoin arkkitehtuurikuvausta.
