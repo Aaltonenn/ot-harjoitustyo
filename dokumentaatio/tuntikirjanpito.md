@@ -46,3 +46,6 @@ Viikon 5 tunnit: 14h
 
 2.5\
 6h jatkoin what_chords_go_well sovelluslogiikan ja käyttöliittymän tekemistä, loin niille testit, päivitin dokumentaatiota, paransin kommentteja, loin käyttöohjeet ja jatkoin arkkitehtuurikuvausta.
+
+
+Viikon 6 tunnit: 9h
