@@ -20,3 +20,9 @@ Viikko 5
 - main menulle, chord_determinationille, give_notesille, search_songsille ja create_songille luotu omat käyttöliittymänsä
 - serviceen luotu luokat SearchSongs ja CreateSong kappaleiden lukemista ja kirjoittamista varten
 - SongRepository luotu tiedon tallennusta varten
+
+Viikko 6
+- graafista käyttöliittymää selkeytetty ja paranneltu
+- what_chords_go_well käyttöliittymä ja sovelluslogiikka luotu
+- edellämainitulle luotu myös testit
+- dokumentaatio (arkkitehtuurikuvaus, readme ja käyttöohje) viimeistelty
