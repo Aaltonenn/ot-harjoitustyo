@@ -29,7 +29,11 @@ Ohessa sekvenssikaavio edellämainitusta toiminnosta
 ```mermaid
 sequenceDiagram
     käyttäjä-)GUI: MainMenu.() 
-    käyttäjä-)ChordDetermination: napin painallus
+    käyttäjä-)DetermineChord(gui): napin painallus
+    DetermineChord(gui)-)ChordDetermination(service): chord_determination("C","E","G")
+    ChordDetermination(service)-)ChordDetermination(service): is_major("C","E","G")
+    ChordDetermination(service)-)DetermineChord(gui): "is major"
+    
 
 ```
 
