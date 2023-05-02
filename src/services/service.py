@@ -130,3 +130,33 @@ class SongCreater:
         print("Your song has been created - Here is the new list of all songs")
         for song in song_repository.read():
             print(f"{song[0]},  {song[1]},  {song[2]}")
+
+class ChordsGoWell:
+#tutkii mitkä soinnut sopii annetun soinnun kanssa
+    def chords_go_well(self,chord):
+        chord = chord.upper()
+        if chord not in Notes:
+            return ''
+        chordlist = []
+        first = Notes[chord]
+        if first+2 > 12:
+            first-=12
+        chordlist.append(Reversed[first+2])
+        if first+4 > 12:
+            first-=12
+        chordlist.append(Reversed[first+4])
+        if first+5 > 12:
+            first-=12
+        chordlist.append(Reversed[first+5])
+        if first+7 > 12:
+            first-=12
+        chordlist.append(Reversed[first+7])
+        if first+9 > 12:
+            first-=12
+        chordlist.append(Reversed[first+9])
+        if first+11 > 12:
+            first-=12
+        chordlist.append(Reversed[first+11])
+        if first < 0:
+            first+=12
+        return chord,chordlist

@@ -3,7 +3,8 @@ from ui.gui_note_giver import NoteGiver
 from ui.gui_determine_chord import DetermineChord
 from ui.gui_search_songs import SearchSongs
 from ui.gui_create_song import CreateSong
-from services.service import GiveNotes, ChordDetermination, SongSearcher, SongCreater
+from ui.gui_what_chords_go_well import WhatChordsGoWell
+from services.service import GiveNotes, ChordDetermination, SongSearcher, SongCreater, ChordsGoWell
 
 
 class GUI:
@@ -35,11 +36,16 @@ class GUI:
             self._current_view.chord_progression_entry.destroy()
         except AttributeError:
             pass
+        try:
+            self._current_view.chord_entry.destroy()
+        except AttributeError:
+            pass
+
         self._current_view = None
 
     def _show_main_menu(self):
         self._hide_current_view()
-        self._current_view = MainMenuUI(self._root, self.handle_to_give_notes, self.handle_to_determine_chord, self.handle_to_search_songs, self.handle_to_create_song)
+        self._current_view = MainMenuUI(self._root, self.handle_to_give_notes, self.handle_to_determine_chord, self.handle_to_search_songs, self.handle_to_create_song, self.handle_to_what_chords_go_well)
         self._current_view.pack()
 
     def handle_to_give_notes(self):
@@ -61,6 +67,12 @@ class GUI:
         self._hide_current_view()
         self._current_view = CreateSong(self._root, self.handle_create_song, self.handle_to_main_menu)
         self._current_view.pack()
+    
+    def handle_to_what_chords_go_well(self):
+        self._hide_current_view()
+        self._current_view = WhatChordsGoWell(self._root, self.handle_what_chords_go_well, self.handle_to_main_menu)
+        self._current_view.pack()
+    
 
     def handle_to_main_menu(self):
         self._show_main_menu()
@@ -109,13 +121,30 @@ class GUI:
         artist = self._current_view.get_artist_entry()
         song_name = self._current_view.get_song_name_entry()
         chord_progression = self._current_view.get_chord_progression_entry()
-        SongCreater.create_song(artist, song_name, chord_progression)
+        if artist == '' or song_name == '' or chord_progression == '':
+            print("Please enter artist, song name and chord progression")
+        else:
+            SongCreater.create_song(artist, song_name, chord_progression)
+    
+    def handle_what_chords_go_well(self):
+        chord = self._current_view.get_chord_entry()
+        test = ChordsGoWell()
+        chordlist = test.chords_go_well(chord)
+        if chordlist != '':
+            chordlist[1][0] = chordlist[1][0]+"m"
+            chordlist[1][1] = chordlist[1][1]+"m"
+            chordlist[1][4] = chordlist[1][4]+"m"
+            chordlist[1][5] = chordlist[1][5]+"dim"
+            print(f"These chords {chordlist[1]} go well with {chordlist[0]} major chord")
+        else:
+            print("Chord not found")
+
 
 
 
 class MainMenuUI:
 #graafisen käyttöliittymän ensimmäisestä näkymästä vastaava luokka
-    def __init__(self, root, handle_give_notes, handle_determine_chord, handle_search_songs, handle_create_song):
+    def __init__(self, root, handle_give_notes, handle_determine_chord, handle_search_songs, handle_create_song, handle_what_chords_go_well):
         self._root = root
         self._current_view = None
         self._frame = None
@@ -123,6 +152,7 @@ class MainMenuUI:
         self.handle_determine_chord = handle_determine_chord
         self.handle_search_songs = handle_search_songs
         self.handle_create_song = handle_create_song
+        self.handle_what_chords_go_well = handle_what_chords_go_well
         self._initialize()
 
     def pack(self):
@@ -158,9 +188,15 @@ class MainMenuUI:
             text="Create a new song with a chord progression",
             command=self.handle_create_song
         )
+        what_chords_go_well_button= ttk.Button(
+            master=self._frame,
+            text="Give a chord and find out what chords go well with it",
+            command=self.handle_what_chords_go_well
+        )
 
         label.grid(row=1, column=0)
         give_notes_button.grid(row=2, column=0)
         determine_chord_button.grid(row=3, column=0)
         search_songs_button.grid(row=4, column=0)
         create_song_button.grid(row=5, column=0)
+        what_chords_go_well_button.grid(row=6, column=0)
