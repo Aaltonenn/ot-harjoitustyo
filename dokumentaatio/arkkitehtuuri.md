@@ -40,7 +40,7 @@ sequenceDiagram
 
 
 
-
+Sovelluksen eri toimminallisuuksien kaavio
 
 
 ```mermaid
@@ -71,7 +71,7 @@ sequenceDiagram
       }
       class gui_main_menu{
       }
-      class chords_go_well_menu{
+      class chords_go_well{
       }
       
       
