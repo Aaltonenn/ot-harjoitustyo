@@ -7,6 +7,11 @@
 
 -Huom ohjelmalla on graafinenkäyttöliittymä mutta sen kaikki tulostukset tulevat komentoriville
 
+# Release
+
+[Release](https://github.com/Aaltonenn/ot-harjoitustyo/releases/tag/viikko5newest)
+
+
 # Dokumentaatio
 
 [vaatimusmäärittely](https://github.com/Aaltonenn/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
