@@ -1,5 +1,10 @@
 # Arkkitehtuurikuvaus
- aslödfjasd
+ 
+![kaavio](https://user-images.githubusercontent.com/127753914/235747248-47dabe51-ad5b-4e09-a7b4-9e81343953ee.png)
+ 
+ 
+
+
 ```mermaid
  classDiagram
       GUI --> gui_main_menu
