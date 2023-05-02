@@ -50,6 +50,7 @@ sequenceDiagram
       gui_main_menu --> determine_chord
       gui_main_menu --> search_chord
       gui_main_menu --> create_song
+      gui_main_menu --> chords_go_well
 
       note_giver --> serviceGiveNotes
       determine_chord --> serviceChordDetermination
@@ -69,6 +70,8 @@ sequenceDiagram
       determine_chord()
       }
       class gui_main_menu{
+      }
+      class chords_go_well_menu{
       }
       
       
