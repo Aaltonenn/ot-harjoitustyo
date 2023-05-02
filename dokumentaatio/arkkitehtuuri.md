@@ -24,6 +24,33 @@ Jokaisella sovelluksen toiminnallisuudella on oma luokkansa src/services/service
 - is_minor_chord(self,note1,note2,note3)
 Ensimmäinen metodi tutkii tekevätkö annetut 3 säveltä kokonaista sointua. Toinen metodi tutkii onko sointu duurisointu vai ei - mikäli sointu on duuri niin metodi palauttaa sen ja siirrytään takaisin käyttöliittymään. Kolmanteen metodiin mennään mikäli sointu ei ole duuri. Tällöin ohjelma palauttaa soinnun ja tiedon siitä että se on mollisointu. Seuraavaksi käyttöliittymä tulostaa komentoriville soinnun joko olevan duuri- tai mollisointu tai sitten ei kumpikaan.
 
+Ohessa sekvenssikaavio edellämainitusta toiminnosta
+
+```mermaid
+sequenceDiagram
+    main-)machine: Machine() 
+    machine-)tank: FuelTank()
+    machine-)tank: self._tank.fill(40)
+    machine-)engine: Engine(self._tank)
+    machine-)engine: self._engine.start()
+    engine-)machine: self._fuel.tank.consume(5)
+    machine-)tank: if running
+    engine-)tank: use_energy()
+    tank-)machine: true
+    machine-)tank: if running
+    engine-)tank: use_energy()
+    tank-)machine: true
+    machine-)tank: if running
+    engine-)tank: use_energy()
+    tank-)machine: true
+    machine-)tank: if running
+    tank-)machine: false
+
+```
+
+
+
+
 
 
 
