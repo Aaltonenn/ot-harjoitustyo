@@ -9,7 +9,7 @@
 
 # Release
 
-[Release](https://github.com/Aaltonenn/ot-harjoitustyo/releases/tag/viikko6)
+[Release](https://github.com/Aaltonenn/ot-harjoitustyo/releases/tag/final)
 
 
 # Dokumentaatio
