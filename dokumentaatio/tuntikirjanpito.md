@@ -49,3 +49,9 @@ Viikon 5 tunnit: 14h
 
 
 Viikon 6 tunnit: 9h
+
+
+
+
+14.5\
+1h Viimeiset korjaukset ja testaus.md luotu
