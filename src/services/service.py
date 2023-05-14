@@ -55,9 +55,7 @@ class ChordDetermination:
             return (Reversed[is_minor],2)
         return "neither"
 
-    """
-    Tutkii onko duuri (major) sointu
-    """
+    """Tutkii onko duuri (major) sointu"""
     def is_major_chord(self,note1,note2,note3):
         list_of_notes = [Notes[note1], Notes[note2], Notes[note3]]
         i=0
