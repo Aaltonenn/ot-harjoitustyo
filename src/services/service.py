@@ -42,7 +42,7 @@ Reversed = {
 
 
 class ChordDetermination:
-    """Luokka joka tutkii onko annettu sointu duuri tai mollisointu - testaa molemmat omilla metodeilla
+    """Luokka joka tutkii onko annettu sointu duuri- tai mollisointu - molemmilla omat metodit
     """
     def chord_determination(self,note1,note2,note3):
         if note1 not in Notes or note2 not in Notes or note3 not in Notes:
