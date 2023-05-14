@@ -42,9 +42,8 @@ Reversed = {
 
 
 class ChordDetermination:
-
-#Tutkii onko kyseinen sointu duuri tai molli sointu kutsumalla
-#kummallekki luotua metodia
+    """Luokka joka tutkii onko annettu sointu duuri tai mollisointu - testaa molemmat omilla metodeilla
+    """
     def chord_determination(self,note1,note2,note3):
         if note1 not in Notes or note2 not in Notes or note3 not in Notes:
             return "unknown notes"
@@ -56,8 +55,9 @@ class ChordDetermination:
             return (Reversed[is_minor],2)
         return "neither"
 
-
-#tämä metodi tutkii onko annettu sointu duuri(major)sointu.
+"""
+Tutkii onko duuri (major) sointu
+"""
     def is_major_chord(self,note1,note2,note3):
         list_of_notes = [Notes[note1], Notes[note2], Notes[note3]]
         i=0
@@ -75,7 +75,9 @@ class ChordDetermination:
         return False
 
 
-#tämä metodi tutkii onko annettu sointu molli(minor)sointu.
+"""
+tämä metodi tutkii onko annettu sointu molli(minor)sointu.
+"""
     def is_minor_chord(self,note1,note2,note3):
         list_of_notes = [Notes[note1], Notes[note2], Notes[note3]]
         i=0
@@ -93,7 +95,9 @@ class ChordDetermination:
         return False
 
 class GiveNotes:
-#kertoo mistä sävelistä käyttäjän antama duuri/mollisointu koostuu
+"""
+kertoo mistä sävelistä käyttäjän antama duuri/mollisointu koostuu
+"""
     def give_notes(self, rootnote, majorminor):
         if rootnote not in Notes:
             return "rootnote doesnt exist"
@@ -114,7 +118,9 @@ class GiveNotes:
         return (notes[0],notes[1],notes[2])
 
 class SongSearcher:
-#etsii kaikki tiedostoon tallennetut kappaleet
+"""
+etsii kaikki tiedostoon tallennetut kappaleet
+"""
     def search_songs(self):
         dirname = os.path.dirname(__file__)
         song_repository = SongRepository(os.path.join(dirname, "..", "..", "data", "songs.csv"))
@@ -122,7 +128,7 @@ class SongSearcher:
             print(f"{song[0]},  {song[1]},  {song[2]}")
 
 class SongCreater:
-#luo tiedostoon uuden kappaleen, kappaleet voi lukea SongSearcherilla
+"""luo tiedostoon uuden kappaleen, kappaleet voi lukea SongSearcherilla"""
     def create_song(artist, song_name, chord_progression):
         dirname = os.path.dirname(__file__)
         song_repository = SongRepository(os.path.join(dirname, "..", "..", "data","songs.csv"))
@@ -132,7 +138,7 @@ class SongCreater:
             print(f"{song[0]},  {song[1]},  {song[2]}")
 
 class ChordsGoWell:
-#tutkii mitkä soinnut sopii annetun soinnun kanssa
+"""tutkii mitkä soinnut sopii annetun soinnun kanssa"""
     def chords_go_well(self,chord):
         chord = chord.upper()
         if chord not in Notes:
