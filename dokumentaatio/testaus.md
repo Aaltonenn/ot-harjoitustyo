@@ -6,4 +6,4 @@ Sovelluslogiikantestauksesta vastaa yksikkötestejä tekevät tiedostot chord_de
 Käyttöliittymää ei testata
 
 ## Testikattavuus
-![Testikattavuus](/dokumentaatio/kuvat/testi.pnd)
+![Testikattavuus](/dokumentaatio/kuvat/testi.png)
